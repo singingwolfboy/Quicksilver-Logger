@@ -175,6 +175,7 @@
 				MACPORTS_PREFIX = /opt/local;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Logger Module";
+                WRAPPER_EXTENSION = "qsplugin";
 			};
 			name = Debug;
 		};
@@ -189,6 +190,7 @@
 				MACPORTS_PREFIX = /opt/local;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Logger Module";
+                WRAPPER_EXTENSION = "qsplugin";
 				ZERO_LINK = NO;
 			};
 			name = Release;
