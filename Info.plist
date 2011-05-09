@@ -26,7 +26,8 @@
 		<string>David Baumgold</string>
 		<key>categories</key>
 		<array>
-			<string>Logging</string>
+			<string>Files</string>
+			<string>Text</string>
 		</array>
 		<key>description</key>
 		<string>Easy Personal Logging</string>
