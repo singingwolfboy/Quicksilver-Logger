@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.davidbaumgold.QS.LoggerPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Logger Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>A6</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2011, David Baumgold</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>David Baumgold</string>
+		<key>categories</key>
+		<array>
+			<string>Logging</string>
+		</array>
+		<key>description</key>
+		<string>Easy Personal Logging</string>
+		<key>extendedDescription</key>
+		<string>Easy Personal Logging</string>
+		<key>icon</key>
+		<string></string>
+		<key>qsversion</key>
+		<string>B59</string>
+	</dict>
+</dict>
+</plist>
