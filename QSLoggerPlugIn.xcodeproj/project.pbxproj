@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		E1EAB046068128A200774DFF /* QSLoggerPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSLoggerPlugIn.m */; };
+		A472E3161378B908009A04BD /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A472E3151378B908009A04BD /* QSCore.framework */; };
+		A472E31A1378BAB1009A04BD /* LogAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A472E3191378BAB1009A04BD /* LogAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A419FFC31378ACB300855A5A /* Logger Module.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logger Module.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A419FFC31378ACB300855A5A /* Logger Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logger Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A472E3151378B908009A04BD /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = "<group>"; };
+		A472E3181378BAB1009A04BD /* LogAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogAction.h; sourceTree = "<group>"; };
+		A472E3191378BAB1009A04BD /* LogAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogAction.m; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		E1EAB045068128A200774DFF /* QSLoggerPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSLoggerPlugIn.m; sourceTree = "<group>"; };
-		E1EAB047068128A800774DFF /* QSLoggerPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSLoggerPlugIn.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +27,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				A472E3161378B908009A04BD /* QSCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +57,7 @@
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A419FFC31378ACB300855A5A /* Logger Module.bundle */,
+				A419FFC31378ACB300855A5A /* Logger Module.qsplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +65,7 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A472E3151378B908009A04BD /* QSCore.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -70,8 +74,8 @@
 		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E1EAB047068128A800774DFF /* QSLoggerPlugIn.h */,
-				E1EAB045068128A200774DFF /* QSLoggerPlugIn.m */,
+				A472E3181378BAB1009A04BD /* LogAction.h */,
+				A472E3191378BAB1009A04BD /* LogAction.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -102,7 +106,7 @@
 			name = "Logger Module";
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSLoggerPlugIn;
-			productReference = A419FFC31378ACB300855A5A /* Logger Module.bundle */;
+			productReference = A419FFC31378ACB300855A5A /* Logger Module.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EAB046068128A200774DFF /* QSLoggerPlugIn.m in Sources */,
+				A472E31A1378BAB1009A04BD /* LogAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,13 +173,16 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(MACPORTS_PREFIX)/Library/Frameworks",
+					"$(SYSTEM_APPS_DIR)/MacPorts/Quicksilver.app/Contents/Frameworks",
 					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
 					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				MACPORTS_PREFIX = /opt/local;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Logger Module";
-                WRAPPER_EXTENSION = "qsplugin";
+				WRAPPER_EXTENSION = qsplugin;
 			};
 			name = Debug;
 		};
@@ -184,13 +191,16 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(MACPORTS_PREFIX)/Library/Frameworks",
+					"$(SYSTEM_APPS_DIR)/MacPorts/Quicksilver.app/Contents/Frameworks",
 					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
 					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				MACPORTS_PREFIX = /opt/local;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Logger Module";
-                WRAPPER_EXTENSION = "qsplugin";
+				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;

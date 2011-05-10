@@ -20,6 +20,24 @@
 	<string>A6</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011, David Baumgold</string>
+	<key>QSActions</key>
+	<dict>
+		<key>LogAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>LogAction</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Log</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
@@ -34,7 +52,7 @@
 		<key>extendedDescription</key>
 		<string>Easy Personal Logging</string>
 		<key>icon</key>
-		<string></string>
+		<string>com.apple.TextEdit</string>
 		<key>qsversion</key>
 		<string>B59</string>
 	</dict>
